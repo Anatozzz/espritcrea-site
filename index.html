@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea Esprit - Mine d'or digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7f1d1d 100%);
+        }
+        
+        .btn-primary {
+            background-color: #7f1d1d;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #991b1b;
+            transform: translateY(-2px);
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .timeline-card {
+            position: relative;
+            padding-left: 60px;
+        }
+        
+        .timeline-card:before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #7f1d1d;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #7f1d1d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-gray-800">
+                        <span class="text-blue-900">Crea</span><span class="text-red-800">Esprit</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-red-800">Accueil</a>
+                    <a href="#about" class="text-gray-800 hover:text-red-800">À propos</a>
+                    <a href="#services" class="text-gray-800 hover:text-red-800">Services</a>
+                    <a href="#contact" class="text-gray-800 hover:text-red-800">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="navbar-burger flex items-center text-gray-800">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Mine d'or digital</h1>
+                <p class="text-xl md:text-2xl mb-8">Apprends à créer, vendre et livrer ton premier site internet clé en main en 72h — même si tu n'y connais rien.</p>
+                <a href="#contact" class="btn-primary text-white font-bold py-3 px-8 rounded-full inline-block">Je commence maintenant</a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Personne travaillant sur ordinateur" class="rounded-lg shadow-2xl animate-float">
+                    <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                        <p class="text-gray-800 font-bold">+200 élèves formés</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Équipe Crea Esprit" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">L'esprit Crea Esprit</h2>
+                    <p class="text-gray-600 mb-4">Nous croyons que tout le monde devrait pouvoir créer sa propre opportunité digitale, sans avoir besoin de compétences techniques avancées ou d'investissements importants.</p>
+                    <p class="text-gray-600 mb-6">Notre formation est conçue pour être accessible, rapide et concrète. En 72 heures, vous serez capable de créer des sites web professionnels et de trouver vos premiers clients.</p>
+                    <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-900">
+                        <p class="text-blue-900 font-semibold">"Notre mission : démocratiser la création web et permettre à chacun de générer des revenus en ligne rapidement."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Notre parcours en 3 étapes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Une méthode simple et efficace pour lancer ton activité web en moins d'une semaine</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-blue-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Création de site</h3>
+                    <p class="text-gray-600 mb-4">Apprends à créer des sites vitrine professionnels en HTML/CSS sans te prendre la tête avec des outils complexes.</p>
+                    <div class="text-red-800 font-semibold">→ 24h de formation</div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-search-dollar text-blue-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Trouver des clients</h3>
+                    <p class="text-gray-600 mb-4">Nos techniques éprouvées pour trouver ton premier client en moins de 24h et commencer à générer des revenus.</p>
+                    <div class="text-red-800 font-semibold">→ Méthode exclusive</div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-blue-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Livraison clé en main</h3>
+                    <p class="text-gray-600 mb-4">Hébergement offert et formation client incluse pour une livraison professionnelle et sans stress.</p>
+                    <div class="text-red-800 font-semibold">→ Support 7j/7</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- New "Et si c'était toi dans 72h ?" Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Et si c'était toi dans 72h ?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Tu n'as pas besoin d'être un expert, ni d'avoir des diplômes. Il te suffit d'avoir une envie : te lancer. Voici ce que tu pourrais accomplir, en 3 jours seulement.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-10">
+                <!-- Jour 1 -->
+                <div class="timeline-card">
+                    <div class="timeline-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Jour 1 : Tu crées ton premier site vitrine</h3>
+                        <p class="text-gray-700">Grâce à nos outils simples et nos modèles prêts à l'emploi, tu construis ton premier site professionnel sans prise de tête. Même si tu n'as jamais codé. Tu découvres que créer un site web est bien plus facile que tu ne le pensais.</p>
+                    </div>
+                </div>
+                
+                <!-- Jour 2 -->
+                <div class="timeline-card">
+                    <div class="timeline-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Jour 2 : Tu trouves ton premier client</h3>
+                        <p class="text-gray-700">On te montre comment trouver un client local ou sur les réseaux sociaux. Tu apprends à présenter ton service avec confiance. Tu proposes ton site et tu expliques ta démarche. À ta grande surprise, tu reçois ton premier "oui" et tu prépares ta première offre.</p>
+                    </div>
+                </div>
+                
+                <!-- Jour 3 -->
+                <div class="timeline-card">
+                    <div class="timeline-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Jour 3 : Tu livres ton site et tu es payé</h3>
+                        <p class="text-gray-700">Tu finalises le site selon les besoins du client. Tu offres l'hébergement gratuit et tu remets un site clé en main avec une formation simple pour ton client. Tu encaisses ton premier paiement. Félicitations ! Tu viens de créer de la valeur, depuis chez toi, en seulement 3 jours.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-xl font-semibold text-gray-800 mb-6">Tu pensais que c'était compliqué ? On t'a prouvé que non.</p>
+                    <a href="#contact" class="btn-primary text-white font-bold py-3 px-8 rounded-full inline-block">Lance-toi aujourd'hui</a>
+                    <p class="text-gray-600 mt-4">et construis ta propre mine d'or digitale</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 bg-red-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à lancer ton activité web ?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Rejoins nos élèves qui génèrent déjà des revenus en ligne avec leurs premiers sites web.</p>
+            <a href="#contact" class="bg-white text-red-800 font-bold py-3 px-8 rounded-full inline-block hover:bg-gray-100 transition">Je m'inscris maintenant</a>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contactez-nous</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Une question ? Envie de rejoindre la formation ? Envoyez-nous un message.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-gray-50 p-8 rounded-lg h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Nos coordonnées</h3>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Téléphone</h4>
+                                <a href="tel:+33681139134" class="text-gray-600 hover:text-red-800">06 81 13 91 34</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                <a href="mailto:espritcreateur80@gmail.com" class="text-gray-600 hover:text-red-800">espritcreateur80@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Horaires</h4>
+                                <p class="text-gray-600">7 jours sur 7, de 9h à 20h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Zone d'intervention</h4>
+                                <p class="text-gray-600">Toute la France (formation en ligne)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Suivez-nous</h4>
+                            <div class="flex space-x-4 justify-center md:justify-start">
+                                <a href="https://instagram.com/crea.esprit" target="_blank" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-red-800 hover:text-white transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.tiktok.com/@creaesprit" target="_blank" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-red-800 hover:text-white transition">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Demande de devis</h3>
+                        
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary text-white font-bold py-3 px-6 rounded-lg w-full">Envoyer la demande</button>
+                        </form>
+                        
+                        <div id="formSuccess" class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded-lg">
+                            Votre message a bien été envoyé ! Nous vous répondrons dans les plus brefs délais.
+                        </div>
+                        
+                        <div id="formError" class="hidden mt-4 p-4 bg-red-100 text-red-800 rounded-lg">
+                            Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer ou nous contacter directement par téléphone.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map -->
+    <div class="bg-gray-100 py-10">
+        <div class="container mx-auto px-6">
+            <div class="rounded-lg overflow-hidden shadow-lg">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413569.201118732!2d1.5438465!3d46.5284584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sFrance!5e0!3m2!1sfr!2sfr!4v1689081234567!5m2!1sfr!2sfr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-xl font-bold">
+                        <span class="text-white">Crea</span><span class="text-red-300">Esprit</span>
+                    </a>
+                    <p class="mt-2 text-blue-200">Mine d'or digital</p>
+                </div>
+                
+                <div class="mb-6 md:mb-0 text-center">
+                    <p class="text-blue-200">Lance-toi maintenant, ton premier client t'attend.</p>
+                </div>
+                
+                <div>
+                    <a href="#contact" class="bg-white text-blue-900 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition">Je commence</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-blue-300 text-sm mb-4 md:mb-0">© 2023 Crea Esprit. Tous droits réservés.</p>
+                <div class="text-blue-300 text-sm">
+                    <a href="#" class="hover:text-white">Mentions légales</a> | 
+                    <a href="#" class="hover:text-white">Politique de confidentialité</a> | 
+                    <a href="#" class="hover:text-white">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+            
+            burger.addEventListener('click', function() {
+                menu.classList.toggle('hidden');
+            });
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            const formSuccess = document.getElementById('formSuccess');
+            const formError = document.getElementById('formError');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(contactForm);
+                const data = {};
+                formData.forEach((value, key) => {
+                    data[key] = value;
+                });
+                
+                // Here you would normally send the data to your server
+                // For this demo, we'll simulate a successful submission
+                
+                // Simulate API call
+                setTimeout(() => {
+                    contactForm.reset();
+                    formSuccess.classList.remove('hidden');
+                    formError.classList.add('hidden');
+                    
+                    // Send email (simulated in this frontend-only version)
+                    // In a real implementation, you would need a backend service
+                    console.log('Message to send:', data);
+                    console.log('This would be sent to: espritcreateur80@gmail.com');
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        formSuccess.classList.add('hidden');
+                    }, 5000);
+                }, 1000);
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Anat0Zzz/paysagisme" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
