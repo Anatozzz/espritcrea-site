@@ -416,37 +416,6 @@
             burger.addEventListener('click', function() {
                 menu.classList.toggle('hidden');
             });
-            
-            
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form data
-                const formData = new FormData(contactForm);
-                const data = {};
-                formData.forEach((value, key) => {
-                    data[key] = value;
-                });
-                
-                // Here you would normally send the data to your server
-                // For this demo, we'll simulate a successful submission
-                
-                // Simulate API call
-                setTimeout(() => {
-                    contactForm.reset();
-                    formSuccess.classList.remove('hidden');
-                    formError.classList.add('hidden');
-                    
-                    // Send email (simulated in this frontend-only version)
-                    // In a real implementation, you would need a backend service
-                    console.log('Message to send:', data);
-                    console.log('This would be sent to: espritcreateur80@gmail.com');
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        formSuccess.classList.add('hidden');
-                    }, 5000);
-                }, 1000);
             });
         });
     </script>
